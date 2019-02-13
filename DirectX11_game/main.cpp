@@ -7,6 +7,8 @@
 //	更新ログ
 //	2019/02/10	・ウィンドウ作成,D3D初期化まで
 //	2019/02/12	・基本的なシェーダ追加,三角ポリゴン表示まで
+//	2019/02/14	・ウィンドウタイプ変更
+//				  閉じるボタン、最小化、最大化が表示されるように
 ///////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////
@@ -89,7 +91,7 @@ HRESULT CMain::InitWindow(HINSTANCE hInstance, INT iX, INT iY, INT iWidth, INT i
 	RegisterClassEx(&wc);
 
 	//	ウィンドウ作成
-	m_hWnd = CreateWindow(WindowName, WindowName, WS_EX_OVERLAPPEDWINDOW, 0, 0, iWidth, iHeight, 0, 0, hInstance, 0);
+	m_hWnd = CreateWindow(WindowName, WindowName, WS_OVERLAPPEDWINDOW, 0, 0, iWidth, iHeight, 0, 0, hInstance, 0);
 	if (!m_hWnd)
 	{
 		return E_FAIL;
